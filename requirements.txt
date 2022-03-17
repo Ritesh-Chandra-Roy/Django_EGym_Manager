@@ -1,0 +1,7 @@
+Django
+django-bootstrap-datepicker-plus
+Pillow
+python-datauri
+python-dateutil
+pytz
+six
