@@ -1,1 +1,1 @@
-web: gunicorn Gymnasium.wsgi --log-file -
+gunicorn Gymnasium.wsgi:application
