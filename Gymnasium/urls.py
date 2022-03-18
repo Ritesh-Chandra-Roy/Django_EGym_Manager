@@ -18,18 +18,13 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 
-from django.views.static import serve
-from django.urls import re_path as url
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('django.contrib.auth.urls')),
     path('members/', include('members.urls')),
     path('notifications/', include('notifications.urls')),
     path('reports/', include('reports.urls')),
-    path('', include('accounts.urls')),
-    url(r'^media/(?P<path>.*)$', serve,{'document_root':       settings.MEDIA_ROOT}), 
-    url(r'^static/(?P<path>.*)$', serve,{'document_root': settings.STATIC_ROOT}) 
+    path('', include('accounts.urls'))
 ]
 
 # for handling profile photos

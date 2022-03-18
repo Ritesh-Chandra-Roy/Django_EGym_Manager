@@ -23,10 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'k6_^w5l$q(85$r_vc*ou9q!aa8hh_aczk425&iw6w4qx$=cg=l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False 
-DEBUG_PROPAGATE_EXCEPTIONS = True
+DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1','djangogymmanagementritesh.herokuapp.com']
+ALLOWED_HOSTS = ['*']
 
 # After succesful login go to path:
 LOGIN_REDIRECT_URL = '/'
@@ -51,7 +50,6 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -127,7 +125,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/2.0/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [
